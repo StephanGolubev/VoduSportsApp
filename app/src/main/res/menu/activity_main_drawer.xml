@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/notices"
+            android:title="Главные новости"
+            android:icon="@mipmap/notices"/>
+        <item
+            android:id="@+id/sports"
+            android:title="Волейбол"
+            android:icon="@mipmap/sports"/>
+        <item
+            android:id="@+id/cultural"
+            android:title="Футбол"
+            android:icon="@mipmap/cultural"/>
+        <item
+            android:id="@+id/technical"
+            android:title="Баксетбол"
+            android:icon="@mipmap/technical"/>
+        <item
+            android:id="@+id/achievements"
+            android:title="Достижения"
+            android:icon="@mipmap/achievement"/>
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Поделиться" />
+            <item
+                android:id="@+id/AboutUs"
+                android:icon="@mipmap/aboutus"
+                android:title="О нас" />
+        </menu>
+    </item>
+
+</menu>
