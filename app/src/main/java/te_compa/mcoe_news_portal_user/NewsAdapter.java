@@ -29,20 +29,6 @@ public class NewsAdapter extends ArrayAdapter<newsData> {
         TextView introview = (TextView) convertView.findViewById(R.id.introTextView);
         newsData news = getItem(position);
 
-        /* TO BE USED FOR ADMIN APP. APPROVED COLOURATION.
-
-        if(news.getApproved()){
-            convertView.setBackgroundColor(Color.rgb(125, 214, 115));
-        }
-        else
-        {
-            convertView.setBackgroundColor(Color.rgb(221, 119, 119));
-        }
-
-         */
-
-
-
         int artLen = news.article.length();
         if(artLen > 25){
             artLen = 25;

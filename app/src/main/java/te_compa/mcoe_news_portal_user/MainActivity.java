@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity
             mNewsListView.setAdapter(newsAdapter);
             toolbar.setTitle(R.string.General);
             mProgressBar.setVisibility(ProgressBar.VISIBLE);
-            myRef.child("General Notice").addValueEventListener(readFromDatabase());
+            myRef.child("Спортивные события").addValueEventListener(readFromDatabase());
 
 
         } else if (id == R.id.sports) {
@@ -182,34 +182,34 @@ public class MainActivity extends AppCompatActivity
             mNewsListView.setAdapter(newsAdapter);
             mProgressBar.setVisibility(ProgressBar.VISIBLE);
 
-            myRef.child("Sports News").addValueEventListener(readFromDatabase());
+            myRef.child("Волейбол").addValueEventListener(readFromDatabase());
 
         } else if (id == R.id.cultural) {
             toolbar.setTitle(R.string.Cultural);
             newslist.clear();
             mNewsListView.setAdapter(newsAdapter);
             mProgressBar.setVisibility(ProgressBar.VISIBLE);
-            myRef.child("Cultural Programs").addValueEventListener(readFromDatabase());
+            myRef.child("Футбол").addValueEventListener(readFromDatabase());
         }
         else if (id == R.id.technical) {
             toolbar.setTitle(R.string.Technical);
             newslist.clear();
             mProgressBar.setVisibility(ProgressBar.VISIBLE);
-            myRef.child("Technical Programs").addValueEventListener(readFromDatabase());
+            myRef.child("Баскетбол").addValueEventListener(readFromDatabase());
         } else if (id == R.id.achievements) {
             toolbar.setTitle(R.string.Academic);
             newslist.clear();
             mProgressBar.setVisibility(ProgressBar.VISIBLE);
-            myRef.child("Academic Achievements").addValueEventListener(readFromDatabase());
+            myRef.child("Марафон").addValueEventListener(readFromDatabase());
         } else if (id == R.id.AboutUs) {
             startActivity(i);
         } else if (id == R.id.nav_share) {
             Intent shareintent = new Intent(android.content.Intent.ACTION_SEND);
             shareintent.setType("text/plain");
-            String shareBodyText = "https://drive.google.com/open?id=12-EQqTfRkLbsgc96MBc6WIg91jQY6f1Q";
-            shareintent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Mcoe News Portal App");
+            String shareBodyText = "https://vogu35.ru/";
+            shareintent.putExtra(android.content.Intent.EXTRA_SUBJECT, "ВоГУ приложение");
             shareintent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
-            startActivity(Intent.createChooser(shareintent, "Choose sharing method"));
+            startActivity(Intent.createChooser(shareintent, "Выбрать как поделиться"));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
